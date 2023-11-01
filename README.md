@@ -1,2 +1,2 @@
 # ServerBase
-A framework/api for (game) serers.
+A framework/api for (game) servers.
