@@ -84,7 +84,9 @@ public class Connection {
 	public void clear() {
 		try {
 			dataOutputStream.flush();
-			dataInputStream.readAllBytes();
+			while (dataInputStream.available() > 0) {
+				dataInputStream.readUTF();
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
